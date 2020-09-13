@@ -9,14 +9,19 @@
         <div class="row justify-content-center">
             <div class="head col-12 col-lg-10 text-center solid">
                 <h2>Showing availabilities for</h2>
-                <h3>{{ start_date }} to {{ end_date }}</h3>
+                <h3>{{ results.start_date }} to {{ results.end_date }}</h3>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 text-center solid">
                 {% for result in results %}
-                    <p>{{ result.availability }} -
-                        <a href="{{ result.url }}">Campground webpage</a>
+                    <p>
+                        {% if results.success %}
+                        &#127867;
+                        {% else %}
+                        &#10060;
+                        {% endif %}
+                        {{ result.availability }} - <a href="{{ result.url }}">Campground webpage</a>
                     </p>
                 {% endfor %}
             </div>
