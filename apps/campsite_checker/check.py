@@ -178,15 +178,18 @@ def master_scraping_routine(campgrounds, start_date, end_date, campsite_type=Non
         )
         if current:
             # emoji = SUCCESS_EMOJI
-            success = 'SUCCESS!'
+            success = True
             availabilities = True
         else:
             # emoji = FAILURE_EMOJI
-            success = 'SORRY!'
+            success = False
             availabilities = False
-        availability = f"{success} {name_of_site} {camp_id} : {current} site(s) available out of {maximum} site(s)"
+        availability = f"{name_of_site} {camp_id} : {current} site(s) available out of {maximum} site(s)"
         rec_url = f"{BASE_URL}/camping/campgrounds/{camp_id}"
-        result = {'availability': availability,
-                  'url': rec_url}
+        result = {'success': success,
+                  'availability': availability,
+                  'url': rec_url,
+                  'start_date': start_date.strftime('%a %m/%d/%Y'),
+                  'end_date': end_date.strftime('%a %m/%d/%Y')}
         results_list.append(result)
     return results_list

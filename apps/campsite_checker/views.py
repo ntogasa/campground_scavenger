@@ -13,9 +13,7 @@ def campground_checker_view(request):
             camp_ids = form.cleaned_data['camp_ids']
             camp_id_list = camp_ids.split()
             results = check.master_scraping_routine(camp_id_list, start_date, end_date)
-            return render(request, 'results.html', {'start_date': start_date,
-                                                    'end_date': end_date,
-                                                    'results': results})
+            return render(request, 'results.html', {'results': results})
         else:
             return 'No success'
     # If GET or other type of request, load empty form
