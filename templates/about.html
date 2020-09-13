@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="form-container">
+    <div class="row justify-content-center">
+        <div class="head solid col-12 col-sm-10 col-md-7">
+            <h1 class="text-center">What is this?</h1>
+            <hr>
+            <p>Campground Scavenger is here to make your life easier.
+                <br><br>
+                Everyone loves a nice campground, and so reserving them can get pretty competitive. And if you've
+                ever tried to reserve a campsite online, chances are you've used 'recreation.gov' to do so.
+                <br><br>
+                The problem with <a href="https://www.recreation.gov">recreation.gov</a>'s
+                campground availability interface is that you have to check
+                the campgrounds individually. This means that if you want to know if ANY campsites are available
+                in Yosemite National Park, you need to visit the web page of each campsite to find out.
+                <br><br>
+                Campground Scavenger on the other hand, lets you enter in as many campgrounds as you want, and tells
+                you whether any of them are available. So you can search all your targets at once.
+                <br><br>
+                The limiting factor here is the campsite IDs. This application requires that you input the 6 digit
+                campground ID numbers for the campgrounds you want to check. What I have done is collect some of
+                these IDs and
+                <ol>
+                    <li>put them on the 'List' page</li>
+                    <li>group them together, so you can search a whole park/forest/zone at once</li>
+                </ol>
+                Anyways, I hope this makes it easier for you go plan your next outdoor excursion. Enjoy!
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

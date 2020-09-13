@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base/base.html' %}
+
+{% block title %}Campground Availability Results{% endblock %}
+
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="head col-12 col-lg-10 text-center solid">
+                <h2>Showing availabilities for</h2>
+                <h3>{{ start_date }} to {{ end_date }}</h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 text-center solid">
+                {% for result in results %}
+                    <p>{{ result.availability }} -
+                        <a href="{{ result.url }}">Campground webpage</a>
+                    </p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

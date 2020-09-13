@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+
+{% url 'search' as search_url %}
+{% url 'list' as list_url %}
+{% url 'about' as about_url %}
+
+<nav class="navbar navbar-expand-sm navbar-dark flex-column align-items-stretch">
+    <div class="d-flex">
+        <a class="navbar-brand mx-sm-auto mr-auto" id="navbar-brand" href="{% url 'search' %}">
+            Campground Scavenger
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible-navbar" aria-controls="collapsible-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="menu-icon" src="{% static 'images/menu.png' %}">
+        </button>
+    </div>
+    <div class="collapse navbar-collapse w-100 sticky-top" id="collapsible-navbar">
+        <ul class="nav navbar-nav mx-auto">
+            <li>
+                <a class="nav-link navvy" href="{% url 'about' %}">
+                    ABOUT
+                </a>
+            </li>
+            <li>
+                <a class="nav-link navvy" href="{% url 'search' %}">
+                    SCAVENGE
+                </a>
+            </li>
+            <li>
+                <a class="nav-link navvy" href="{% url 'list' %}">
+                    LIST
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'base/base.html' %}
+{% block title %}Campground List{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="head col-12 col-sm-10 col-md-7 text-center solid">
+            <h1>List of all campgrounds</h1>
+            <p>Here is a list of some campground IDs that I've collected.</p>
+            <hr>
+        </div>
+    </div>
+    {% for campground in campgrounds %}
+    <div class="row justify-content-center">
+        <div class="col-4 col-sm-3 col-md-2 text-center solid">
+            <p>{{ campground.name }}</p>
+        </div>
+        <div class="col-4 col-sm-4 col-md-3 text-center solid">
+            <p>{{ campground.camp_id }}</p>
+        </div>
+        <div class="col-4 col-sm-3 col-md-2 text-center solid">
+            <p>{{ campground.zone }}</p>
+        </div>
+    </div>
+    {% endfor %}
+    <div>
+    </div>
+</div>
+{% endblock %}
