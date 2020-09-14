@@ -6,7 +6,4 @@ from . import views
 router = DefaultRouter()
 router.register(r'campgrounds', views.CampgroundViewSet, basename='campground')
 
-urlpatterns = [
-    path('', include(router.urls)),
-]
-
+urlpatterns = router.urls
