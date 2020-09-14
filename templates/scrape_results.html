@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row justify-content-center head">
+    <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-7 solid text-center">
             <h1 class="heading">Campground ID Scraping Results</h1>
         </div>
@@ -13,11 +13,25 @@
     <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-7 solid text-center">
             <p>We found {{ count }} campground IDs between {{ start_id }} and {{ end_id }}.</p>
+            <table class="table">
+                <tr>
+                    <th>Camp ID</th>
+                    <th>Name</th>
+                    <th>Parent</th>
+                </tr>
+                {% for object in data %}
+                <tr>
+                    <td>{{ object.camp_id }}</td>
+                    <td>{{ object.name }}</td>
+                    <td>{{ object.parent }}</td>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-7 solid text-center">
-            <h3>Campground ID Scraping History</h3>
+            <h4>Campground ID Scraping History</h4>
         </div>
     </div>
     <div class="row justify-content-center">

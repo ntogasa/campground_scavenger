@@ -43,6 +43,7 @@ def scrape_view(request):
         return render(request, 'scrape_results.html', {"start_id": start_id,
                                                        "end_id": end_id,
                                                        "logs": LOG,
+                                                       "data": DATA,
                                                        "count": count})
     else:
         form = forms.IDSearchForm()
