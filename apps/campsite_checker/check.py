@@ -167,6 +167,8 @@ def master_scraping_routine(campgrounds, start_date, end_date, campsite_type=Non
     # Format input dates as datetime objects
     start_date = datetime.strptime(start_date, INPUT_DATE_FORMAT)
     end_date = datetime.strptime(end_date, INPUT_DATE_FORMAT)
+    start_string = start_date.strftime('%a %b %d, %Y')
+    end_string = end_date.strftime('%a %b %d, %Y')
     results_list = []
     for camp_id in campgrounds:
         campground_information = scrape_campground_availability(
@@ -186,10 +188,10 @@ def master_scraping_routine(campgrounds, start_date, end_date, campsite_type=Non
             availabilities = False
         availability = f"{name_of_site} {camp_id} : {current} site(s) available out of {maximum} site(s)"
         rec_url = f"{BASE_URL}/camping/campgrounds/{camp_id}"
-        result = {'success': success,
-                  'availability': availability,
-                  'url': rec_url,
-                  'start_date': start_date.strftime('%a %m/%d/%Y'),
-                  'end_date': end_date.strftime('%a %m/%d/%Y')}
+        result = {
+            'success': success,
+            'availability': availability,
+            'url': rec_url,
+        }
         results_list.append(result)
-    return results_list
+    return results_list, start_string, end_string
