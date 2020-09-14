@@ -49,15 +49,15 @@ body, html {
     height: 100%;
 }
 
-h1 {
+h1.heading {
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
-h2 {
+h2.heading {
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
-h3 {
+h3.heading {
     font-family: 'Open Sans Condensed', sans-serif;
 }
 

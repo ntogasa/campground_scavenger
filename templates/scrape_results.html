@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends 'base/base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row justify-content-center head">
+        <div class="col-12 col-sm-10 col-md-7 solid text-center">
+            <h1 class="heading">Campground ID Scraping Results</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-7 solid text-center">
+            <p>We found {{ count }} campground IDs between {{ start_id }} and {{ end_id }}.</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-7 solid text-center">
+            <h3>Campground ID Scraping History</h3>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-7 solid">
+            <table class="table">
+                <tr>
+                    <th>Date</th>
+                    <th># of IDs found</th>
+                    <th>From ID</th>
+                    <th>To ID</th>
+                </tr>
+                {% for log in logs %}
+                <tr>
+                    <td>{{ log.date }}</td>
+                    <td>{{ log.count }}</td>
+                    <td>{{ log.start_id }}</td>
+                    <td>{{ log.end_id }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

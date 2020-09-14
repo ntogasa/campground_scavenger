@@ -23,7 +23,12 @@
         </div>
     </div>
     {% endfor %}
-    <div>
+    {% if user.is_authenticated %}
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-7 text-center solid pb-3">
+            <a href="{% url 'scrape' %}">Find Campground ID numbers</a>
+        </div>
     </div>
+    {% endif %}
 </div>
 {% endblock %}
