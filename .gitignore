@@ -5,9 +5,8 @@
 __pycache__
 db.sqlite3
 media
-scrape.py
-200000_203000.json
-203000_217000.json
+../frontend/200000_203000.json
+../frontend/203000_217000.json
 
 # Backup files #
 *.bak
