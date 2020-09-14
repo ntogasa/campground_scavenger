@@ -5,6 +5,5 @@ from ..library.models import Campground
 class CampgroundSerializer(serializers.ModelSerializer):
     class Meta:
         model = Campground
-        fields = ['camp_id', 'name', 'parent_name']
+        fields = ['camp_id', 'name', 'parent']
         lookup_field = 'camp_id'
-
