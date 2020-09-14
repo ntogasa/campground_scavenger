@@ -20,5 +20,6 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.campsite_checker.urls')),
-    path('about/', views.about_view, name='about')
+    path('about/', views.about_view, name='about'),
+    path('data/', include('apps.library.urls')),
 ]

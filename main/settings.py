@@ -45,12 +45,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 
     # Third party apps
     'crispy_forms',
 
     # Self-created apps
     'apps.campsite_checker',
+    'apps.library'
 ]
 
 MIDDLEWARE = [

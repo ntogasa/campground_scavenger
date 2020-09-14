@@ -20,8 +20,3 @@ def campground_checker_view(request):
     else:
         form = forms.CampgroundForm()
         return render(request, 'search.html', {'form': form})
-
-
-def list_view(request):
-    campgrounds = models.Campground.objects.all()
-    return render(request, 'list.html', {'campgrounds': campgrounds})
