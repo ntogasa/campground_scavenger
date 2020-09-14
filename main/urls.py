@@ -18,8 +18,10 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include('apps.campsite_checker.urls')),
     path('about/', views.about_view, name='about'),
-    path('data/', include('apps.library.urls')),
+    path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include('apps.api.urls')),
+    path('library/', include('apps.library.urls')),
 ]

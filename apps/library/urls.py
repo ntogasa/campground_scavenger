@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.authtoken import views as auth_views
 from . import views
 
 
 urlpatterns = [
-    path('api/', include('apps.library.api.urls')),
-    path('campgrounds/', views.list_view, name='list')
+    path('list/', views.list_view, name='list')
 ]

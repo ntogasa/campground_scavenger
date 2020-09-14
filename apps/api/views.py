@@ -1,5 +1,5 @@
-from rest_framework import viewsets
-from ..models import Campground
+from rest_framework import viewsets, permissions
+from ..library.models import Campground
 from .serializers import CampgroundSerializer
 
 

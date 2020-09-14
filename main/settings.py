@@ -46,13 +46,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
 
     # Third party apps
     'crispy_forms',
 
     # Self-created apps
     'apps.campsite_checker',
-    'apps.library'
+    'apps.library',
+    'apps.api',
 ]
 
 MIDDLEWARE = [
@@ -102,16 +104,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.authapp.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.authapp.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.authapp.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.authapp.password_validation.NumericPasswordValidator',
     },
 ]
 
@@ -139,3 +141,9 @@ STATICFILES_DIRS = (os.path.join('static'),)
 
 # Django Crispy Forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# REST Framework Configuration
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticatedOrReadOnly',),
+}
+

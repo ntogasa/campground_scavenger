@@ -9,7 +9,7 @@
             <p>Here is a list of some campground IDs that I've collected.</p>
             <hr>
         </div>
-    </div>
+    </div >
     {% for campground in campgrounds %}
     <div class="row justify-content-center">
         <div class="col-4 col-sm-3 col-md-2 text-center solid">
@@ -19,7 +19,7 @@
             <p>{{ campground.camp_id }}</p>
         </div>
         <div class="col-4 col-sm-3 col-md-2 text-center solid">
-            <p>{{ campground.zone }}</p>
+            <p>{{ campground.parent_name }}</p>
         </div>
     </div>
     {% endfor %}
