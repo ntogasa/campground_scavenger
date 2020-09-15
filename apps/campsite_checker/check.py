@@ -97,16 +97,12 @@ def send_request(url, params):
     :return response: a json object
     :rtype response: json
     """
-    resp = requests.get(url, params=params, headers=headers)
-    if resp.status_code != 200:
-        raise RuntimeError(
-            "failedRequest",
-            "ERROR, {} code received from {}: {}".format(
-                resp.status_code, url, resp.text
-            ),
-        )
-    response = resp.json()
-    return response
+    try:
+        resp = requests.get(url, params=params, headers=headers)
+        response = resp.json()
+        return response
+    except:
+        return False
 
 
 def scrape_campground_availability(camp_id, start_date, end_date, campsite_type=None):
@@ -133,7 +129,8 @@ def scrape_campground_availability(camp_id, start_date, end_date, campsite_type=
         params = {"start_date": format_date(month)}
         url = f"{BASE_URL}{AVAILABILITY_ENDPOINT}{camp_id}/month?"
         resp = send_request(url, params)
-        api_data.append(resp)
+        if resp:
+            api_data.append(resp)
     # Collapse the data into the described output format.
     # Filter by campsite_type if necessary.
     data = {}

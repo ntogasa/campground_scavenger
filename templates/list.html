@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% extends 'base/base.html' %}
 {% load static %}
-{% block title %}Campground List{% endblock %}
+{% block title %}Campgrounds{% endblock %}
 {% block content %}
 <div class="container-fluid">
 
@@ -16,9 +16,18 @@
 
     <!--Heading-->
     <div class="row justify-content-center">
-        <div class="col-12 col-sm-10 col-md-7 text-center solid pt-4">
-            <h1 class="heading">List of all campgrounds</h1>
-            <p>Here is a list of some campground IDs that I've collected.</p>
+        <div class="col-12 col-sm-10 col-md-7 text-center solid px-4 pt-4">
+            <h1 class="heading">Campground Database</h1>
+            <p> Here you can access our campground ID database.</p>
+            <p>
+                <strong>STEP 1</strong> - Search for campground ID numbers by entering the name of their parent zone.
+                For example, if I wanted to find all the campgrounds in Yosemite, I would type 'Yosemite National Park'
+                below.
+            </p>
+            <p>
+                <strong>STEP 2</strong> - Copy & paste the campground IDs you find, and then head back over
+                to the <a href="{% url 'search' %}">AVAILABILITY</a> page. Paste the IDs there, and check for availability!
+            </p>
         </div>
     </div >
 
@@ -27,7 +36,7 @@
         <div class=" col-12 col-sm-10 col-md-7 text-center solid">
             <div id="show-camps" class="container">
                 <div class="row text-center pb-3">
-                    <input class="w-100 text-center" type="text" v-model="search" placeholder="search campgrounds"/>
+                    <input class="w-100 text-center" type="text" v-model="search" placeholder="Enter a parent zone here"/>
                 </div>
                 <div class="row py-3 justify-content-center">
                     <button class="btn btn-success py-1" v-clipboard:copy="filteredIDs">
@@ -36,7 +45,15 @@
                 </div>
                 <div class="row justify-content-center">
                     {% verbatim %}
-                    <table class="table pt-4 pb-5" v-for="camp in filteredCamps">
+                    <table class="table text-center">
+                        <tr>
+                            <th>Campground ID</th>
+                            <th>Campground Name</th>
+                            <th>Parent Zone Name</th>
+                        </tr>
+                    </table>
+
+                    <table class="table" v-for="camp in filteredCamps">
                         <tr>
                             <td>
                                 {{ camp.camp_id }}
