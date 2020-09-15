@@ -12,3 +12,5 @@ class CampgroundViewSet(viewsets.ModelViewSet):
 class LogViewSet(viewsets.ModelViewSet):
     queryset = Log.objects.all()
     serializer_class = LogSerializer
+    # Only authenticated users can access Log data through API
+    permission_classes = [permissions.IsAuthenticated]
