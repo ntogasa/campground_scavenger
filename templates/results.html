@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="head col-12 col-lg-10 text-center solid">
-                <h2>Showing availabilities for</h2>
+                <h1 class="heading">Showing availabilities for</h1>
                 <h3><strong>{{ start_date }}</strong> to <strong>{{ end_date }}</strong></h3>
             </div>
         </div>
@@ -16,7 +16,7 @@
             <div class="col-12 col-md-10 text-center solid">
                 {% for result in results %}
                     <p>
-                        {% if results.success %}
+                        {% if result.success %}
                         &#127867;
                         {% else %}
                         &#10060;
@@ -24,6 +24,11 @@
                         {{ result.availability }} - <a href="{{ result.url }}">Campground webpage</a>
                     </p>
                 {% endfor %}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 text-center solid py-3">
+                <a href="{% url 'search' %}">Search again</a>
             </div>
         </div>
     </div>
