@@ -1,7 +1,7 @@
-# Campsite Checker
+# &#x26FA; Campground Checker
 Campsite Checker is a Django application that scrapes campground
 availabilities from recreation.gov, and also saves campground ID 
-numbers.
+numbers. 	
 
 ## Why Use This?
 Reserving campgrounds on reservation.gov is not a very 
