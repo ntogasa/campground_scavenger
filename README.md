@@ -28,5 +28,7 @@ open an issue first to discuss what you would like
 to change. 
 
 ## Acknowledgements
-Thanks to banool for putting together the scraping that I 
-constructed this application around!
+The campsite availability checker in this app is an adaptation of the work of 
+https://github.com/banool/recreation-gov-campsite-checker, which in turn is 
+an adaptation of https://github.com/bri-bri/yosemite-camping 's application. 
+I couldn't have done it without them!
