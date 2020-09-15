@@ -17,13 +17,15 @@ Yosemite National Park, rather than visiting each campground's
 webpage you can use Campground Checker to search them all at once. 
 
 #### API - Access Campground IDs, Names, Parents
-Included is an API with public read access. Each campground
-in the database includes a campground name, ID number, and parent zone name.
+Included is an API with public read access. A built-in scraper
+combs through the recreation.gov API and saves campground data. Each saved campground
+object includes a campground name, ID number, and parent zone name.
 
 For example: 
 {'camp_id': '232123', 'name': 'Whitney Portal', 'parent': 'Inyo National Forest'}
 
 ## Usage
+##### Suggested flow:
 STEP 1 - Visit the 'Campgrounds' page, and type in the name of a parent zone
 
 STEP 2 - Copy and paste the campground ID results
@@ -31,6 +33,11 @@ STEP 2 - Copy and paste the campground ID results
 STEP 3 - Go to the 'Availability' page, paste your campground IDs, enter your 
 reservation dates, and hit submit!
 
+##### Alternate flow:
+STEP 1 - Assemble your own list of campground IDs by combining results 
+from different zones
+
+STEP 2 - copy, paste, and submit
 
 ## Built Using
 - [Django](https://www.djangoproject.com/) (open source Python web framework)
