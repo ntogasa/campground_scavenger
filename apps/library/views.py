@@ -6,7 +6,7 @@ from .models import Campground, Log
 # Create your views here.
 def list_view(request):
     campgrounds = Campground.objects.all()
-    return render(request, 'list.html')
+    return render(request, 'campgrounds.html')
 
 
 def scrape_view(request):

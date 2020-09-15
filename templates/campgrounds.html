@@ -9,7 +9,7 @@
     {% if user.is_authenticated %}
     <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-7 text-center solid pt-5">
-            <a href="{% url 'scrape' %}">Scrape campground ID numbers</a>
+            <a href="{% url 'availability' %}">Scrape campground ID numbers</a>
         </div>
     </div>
     {% endif %}
@@ -26,7 +26,7 @@
             </p>
             <p>
                 <strong>STEP 2</strong> - Copy & paste the campground IDs you find, and then head back over
-                to the <a href="{% url 'search' %}">AVAILABILITY</a> page. Paste the IDs there, and check for availability!
+                to the <a href="{% url 'availability' %}">AVAILABILITY</a> page. Paste the IDs there, and check for availability!
             </p>
         </div>
     </div >

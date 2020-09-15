@@ -7,7 +7,7 @@
 
 <nav class="navbar navbar-expand-sm navbar-dark flex-column align-items-stretch">
     <div class="d-flex">
-        <a class="navbar-brand mx-sm-auto mr-auto" id="navbar-brand" href="{% url 'search' %}">
+        <a class="navbar-brand mx-sm-auto mr-auto" id="navbar-brand" href="{% url 'availability' %}">
             Campground Scavenger
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible-navbar" aria-controls="collapsible-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,12 +22,12 @@
                 </a>
             </li>
             <li>
-                <a class="nav-link navvy" href="{% url 'search' %}">
+                <a class="nav-link navvy" href="{% url 'availability' %}">
                     AVAILABILITY
                 </a>
             </li>
             <li>
-                <a class="nav-link navvy" href="{% url 'list' %}">
+                <a class="nav-link navvy" href="{% url 'campgrounds' %}">
                     CAMPGROUNDS
                 </a>
             </li>

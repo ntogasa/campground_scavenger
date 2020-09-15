@@ -13,7 +13,7 @@ def campground_checker_view(request):
             camp_ids = form.cleaned_data['camp_ids']
             camp_id_list = camp_ids.split()
             results, start_string, end_string = check.master_scraping_routine(camp_id_list, start_date, end_date)
-            return render(request, 'results.html', {'start_date': start_string,
+            return render(request, 'availability_results.html', {'start_date': start_string,
                                                     'end_date': end_string,
                                                     'results': results})
         else:
@@ -21,4 +21,4 @@ def campground_checker_view(request):
     # If GET or other type of request, load empty form
     else:
         form = forms.CampgroundForm()
-        return render(request, 'search.html', {'form': form})
+        return render(request, 'availability.html', {'form': form})
