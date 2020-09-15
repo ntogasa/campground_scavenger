@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% extends 'base/base.html' %}
+{% load static %}
 
 {% block content %}
 <div class="form-container">
@@ -29,6 +30,17 @@
                 </ol>
                 Anyways, I hope this makes it easier for you go plan your next outdoor excursion. Enjoy!
             </p>
+        </div>
+    </div>
+    <!--Github link-->
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-7 solid pb-2 text-center">
+            <a href="https://github.com/ntogasa">
+                <img src="{% static 'images/GitHub-Mark-32px.png' %}">
+                <br>
+                <p>Find the source code here</p>
+            </a>
+
         </div>
     </div>
 </div>
