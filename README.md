@@ -4,8 +4,8 @@ availabilities from recreation.gov, and also saves campground ID
 numbers. 	
 
 ## Purposes/Functions
-Reserving campgrounds on reservation.gov is not a very 
-efficient process, because checking campground availabilities
+Reserving campgrounds on recreation.gov is not a very 
+efficient process, as checking campground availabilities
 requires visiting each campground's website individually. Campground
 Checker resolves this inefficiency via mas search capabilities. It
 also provides an API.
@@ -14,8 +14,8 @@ also provides an API.
 This application allows you to mass-search availabilities for
 many campgrounds at the click of a button. 
 
-For instance, if you want to find an available campground in
-Yosemite National Park, rather than visiting each campground's
+For instance, if you want to find an available campsite in
+Yosemite National Park, rather than visiting each individual campground's
 webpage you can use Campground Checker to search them all at once. 
 
 #### API - Access Campground IDs, Names, Parents
@@ -63,4 +63,3 @@ to change.
 The campsite availability checker in this app is an adaptation of the work of 
 https://github.com/banool/recreation-gov-campsite-checker, which in turn is 
 an adaptation of https://github.com/bri-bri/yosemite-camping 's application. 
-I couldn't have done it without them!
