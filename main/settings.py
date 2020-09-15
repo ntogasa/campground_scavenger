@@ -135,11 +135,18 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join('static'),)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS = (
+    os.path.join('static'),
+)
+
+# Whitenoise Configuration (for static files)
+WHITENOISE = config('WHITENOISE', cast=bool, default=True)
+if WHITENOISE:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'live-static', 'static-root')
+else:
+    STATIC_ROOT = ''
+
 
 # Django Crispy Forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
