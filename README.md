@@ -1,12 +1,14 @@
 # &#x26FA; Campground Checker
-Campsite Checker is a Django application that scrapes campground
+Campsite Checker is a web application that scrapes campground
 availabilities from recreation.gov, and also saves campground ID 
 numbers. 	
 
-## Why Use This?
+## Purposes/Functions
 Reserving campgrounds on reservation.gov is not a very 
 efficient process, because checking campground availabilities
-requires visiting each campground's website individually.
+requires visiting each campground's website individually. Campground
+Checker resolves this inefficiency via mas search capabilities. It
+also provides an API.
 
 #### Mass Search Campground Availability
 This application allows you to mass-search availabilities for
@@ -17,12 +19,17 @@ Yosemite National Park, rather than visiting each campground's
 webpage you can use Campground Checker to search them all at once. 
 
 #### API - Access Campground IDs, Names, Parents
-Included is an API with public read access. A built-in scraper
-combs through the recreation.gov API and saves campground data. Each saved campground
+Included is an API with public read access. Each campground
 object includes a campground name, ID number, and parent zone name.
 
-For example: 
+Example campground object: 
 {'camp_id': '232123', 'name': 'Whitney Portal', 'parent': 'Inyo National Forest'}
+
+#### Campground ID Scraper
+Authenticated users can scrape the recreation.gov API to discover and save
+campground ID numbers, names, and parent zone names. These objects are then
+displayed via a Vue JS app, which the public can use to mass search 
+availability.
 
 ## Usage
 ##### Suggested flow:
