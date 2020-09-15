@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
     # Third party apps
     'crispy_forms',
+    'corsheaders',
 
     # Self-created apps
     'apps.campsite_checker',
@@ -59,6 +60,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -155,4 +157,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticatedOrReadOnly',),
 }
+
+# CORS
+CORS_ORIGIN_ALLOW_ALL = config('CORS_ORIGIN_ALLOW_ALL', cast=bool, default=True)
+# CORS_ORIGIN_WHITELIST = []
 
