@@ -31,6 +31,15 @@ STEP 2 - Copy and paste the campground ID results
 STEP 3 - Go to the 'Availability' page, paste your campground IDs, enter your 
 reservation dates, and hit submit!
 
+
+## Built Using
+- [Django](https://www.djangoproject.com/) (open source Python web framework)
+- [Django REST Framework](https://www.django-rest-framework.org/) for the API
+- [Vue JS](https://www.vuejs.org/) for interactive campground ID list display
+- [HTML5](https://www.w3schools.com/html/)
+- [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) (CSS Framework) with some custom CSS
+- [Whitenoise](http://whitenoise.evans.io/en/stable/) to handle static files
+
 ## Contributing
 Pull requests are welcome. For major changes, please
 open an issue first to discuss what you would like 
