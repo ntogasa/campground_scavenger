@@ -9,7 +9,7 @@
     {% if user.is_authenticated %}
     <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-7 text-center solid pt-5">
-            <a href="{% url 'availability' %}">Scrape campground ID numbers</a>
+            <a href="{% url 'scrape_ids' %}">Scrape campground ID numbers</a>
         </div>
     </div>
     {% endif %}
@@ -46,7 +46,7 @@
                 </div>
                 <div class="row justify-content-center">
                     {% verbatim %}
-                    <table class="table text-center">
+                    <table class="table">
                         <tr>
                             <th>Campground ID</th>
                             <th>Campground Name</th>

@@ -5,37 +5,41 @@
 {% block content %}
 <div class="form-container">
     <div class="row justify-content-center">
-        <div class="head solid col-12 col-sm-10 col-md-7">
+        <div class="head solid col-12 col-sm-10 col-md-7 text-center">
             <h1 class="text-center heading">What is this?</h1>
             <hr>
-            <p>Campground Scavenger is here to make your life easier.
+            <p>
+                Campground Scavenger is here to make it easier for you to find campground availabilities.
                 <br><br>
-                Everyone loves a nice campground, and so reserving them can get pretty competitive. And if you've
-                ever tried to reserve a campsite online, chances are you've used 'recreation.gov' to do so.
+                If you've reserved a campground online before, chances are you've used recreation.gov to do so.
+                A huge inefficiency (that I believe is intentional design) of recreation.gov's reservation
+                interface tis that you can only check one campground at a time for availabilities.
                 <br><br>
-                The problem with <a href="https://www.recreation.gov">recreation.gov</a>'s
-                campground availability interface is that you have to check
-                the campgrounds individually. This means that if you want to know if ANY campsites are available
+                This means that if you want to know if ANY campsites are available
                 in Yosemite National Park, you need to visit the web page of each campsite to find out.
                 <br><br>
-                Campground Scavenger on the other hand, lets you enter in as many campgrounds as you want, and tells
-                you whether any of them are available. So you can search all your targets at once.
-                <br><br>
-                The limiting factor here is the campsite IDs. This application requires that you input the 6 digit
-                campground ID numbers for the campgrounds you want to check. What I have done is collect some of
-                these IDs and
-                <ol>
-                    <li>put them on the 'List' page</li>
-                    <li>group them together, so you can search a whole park/forest/zone at once</li>
-                </ol>
-                Anyways, I hope this makes it easier for you go plan your next outdoor excursion. Enjoy!
+                Campground Scavenger on the other hand, let's you mass search as many campgrounds as you want. At
+                the click of a button, you can search every reservable campground in Kings Canyon National Park!
+                <br>
             </p>
+            <h5 class="text-center">How to use</h5>
+            <ol class="text-left">
+                <li>go to <a href="{% url 'campgrounds' %}">Campgrounds</a> and search your desired parent zone (i.e. Kings Canyon National Park)</li>
+                <li>copy the ID numbers, and go to the <a href="{% url 'availability' %}">Availability</a> page</li>
+                <li>paste them in the input field, along with your target dates, and submit</li>
+                <li>wait for your results to appear!</li>
+            </ol>
+            <p>I hope this makes it easier for you to plan your next outdoor excursion. Enjoy!</p>
+            <br>
+            <h5 class="text-center">API</h5>
+            <p>You can visit the API to access our campground database. Each campground object in the database
+            includes a name, ID number, and parent zone name.</p>
         </div>
     </div>
     <!--Github link-->
     <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-7 solid pb-2 text-center">
-            <a href="https://github.com/ntogasa">
+            <a href="https://github.com/ntogasa/campground_checker">
                 <img src="{% static 'images/GitHub-Mark-32px.png' %}">
                 <br>
                 <p>Find the source code here</p>

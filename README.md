@@ -35,7 +35,7 @@ availability.
 ##### Suggested flow:
 STEP 1 - Visit the 'Campgrounds' page, and type in the name of a parent zone
 
-STEP 2 - Copy and paste the campground ID results
+STEP 2 - Copy the campground ID results to your clipboard
 
 STEP 3 - Go to the 'Availability' page, paste your campground IDs, enter your 
 reservation dates, and hit submit!
