@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..library.models import Campground, Log
+from ..campgrounds.models import Campground, Log
 
 
 class CampgroundSerializer(serializers.ModelSerializer):

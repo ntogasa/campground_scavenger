@@ -42,20 +42,23 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sessions',
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
 
     # Third party apps
-    'crispy_forms',
+    'celery_progress',
     'corsheaders',
+    'crispy_forms',
+    'django_celery_results',
 
     # Self-created apps
-    'apps.campsite_checker',
-    'apps.library',
     'apps.api',
+    'apps.campgrounds',
+    'apps.campsite_checker',
+
 ]
 
 MIDDLEWARE = [
@@ -161,4 +164,14 @@ REST_FRAMEWORK = {
 # CORS
 CORS_ORIGIN_ALLOW_ALL = config('CORS_ORIGIN_ALLOW_ALL', cast=bool, default=True)
 # CORS_ORIGIN_WHITELIST = []
+
+# Celery
+CELERY_BROKER_URL = 'amqp://localhost:5672'
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'UTC'
+
+
 

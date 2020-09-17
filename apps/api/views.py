@@ -1,5 +1,5 @@
 from rest_framework import viewsets, permissions
-from ..library.models import Campground, Log
+from ..campgrounds.models import Campground, Log
 from .serializers import CampgroundSerializer, LogSerializer
 
 
