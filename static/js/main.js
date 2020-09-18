@@ -7,7 +7,7 @@ const App = new Vue({
         };
     },
     async created() {
-        const response = await fetch('http://localhost:8000/api/campgrounds/');
+        const response = await fetch('https://campground-checker.herokuapp.com/api/campgrounds/');
         this.campgrounds = await response.json();
     },
     methods: {
