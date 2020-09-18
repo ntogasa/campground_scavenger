@@ -189,18 +189,18 @@ Whitney Portal                                              232123
 232398 231956 233101 232236 232305 232237 273816 234290 234311 232396 233807 232395 232052 10039845 232268 233377 233404 232069 232238 233860 231955 232269 233830 232077 234663 233378 232270 231957 233235 233907 232239 232271 234330 232240 232422 232241 234329 232242 232123
 
 ### STANISLAUS NATIONAL FOREST
-Lake Alpine - Silver Tip Campground                         274410
-Lake Alpine - Silver Valley Campground                      274314
-Lake Alpine - Pine Marten                                   245489
-Lake Alpine - West Shore                                    10005253
-Lake Alpine - Lodgepole Group                               232343
-Cherry Valley                                               234756
-Big Meadow                                                  232260
-Dimond O (Diamond O?)                                       233772
-Lost Claim                                                  234761
-Pinecrest                                                   232254
-Pines Group Stanislaus                                      233775
-Pioneer Trail                                               232293
+Lake Alpine - Silver Tip Campground                         274410-
+Lake Alpine - Silver Valley Campground                      274314-
+Lake Alpine - Pine Marten                                   245489-
+Lake Alpine - West Shore                                    10005253-
+Lake Alpine - Lodgepole Group                               232343-
+Cherry Valley                                               234756-
+Big Meadow                                                  232260-
+Dimond O (Diamond O?)                                       233772-
+Lost Claim                                                  234761-
+Pinecrest                                                   232254-
+Pines Group Stanislaus                                      233775-
+Pioneer Trail                                               232293-
 274410 274314 245489 10005253 232343 234756 232260 233772 234761 232254 233775 232293
 
 ### ELDORADO NATIONAL FOREST
@@ -271,92 +271,92 @@ Wishon Bass Lake                                            232911
 232808 232811 232912 232882 232812 232909 232813 232136 233839 232821 233842 232820 232878 232803 232880 232814 232906 232802 232817 232804 232805 232815 232910 232818 232881 232801 233837 232877 232879 232810 232806 232911
 
 ### SEQUOIA NATIONAL FOREST
-Aspen Hollow Group                                          232780
-Belknap                                                     232809
-Big Meadows Cabin                                           234458
-Boulder Gulch                                               232795
+Aspen Hollow Group                                          232780-
+Belknap                                                     232809-
+Big Meadows Cabin                                           234458-
+Boulder Gulch                                               232795-
 Big Meadow Campground                                       256932
-Camp 9                                                      234011
-Camp Four and Half Cabin                                    234457
-Camp 3 (Camp Three Campground)                              232889
-Cove Group                                                  232783
-Coy Flat                                                    232893
-Eshom Campground                                            233363
-Fairview Campground                                         232890
-Fir Group                                                   232784
-French Gulch                                                232786
-Frog Meadow Guard Station                                   234223
-Goldledge Campground                                        232891
-Grouse Valley                                               233325
-Halfway Group Campground                                    120990
-Headquarters                                                232819
-Holey Meadow                                                232823
-Hospital Flat                                               232816
-Hume Lake                                                   232781
-Hungry Gulch                                                232794
-Limestone Campground                                        123440
-Live Oak                                                    232790
-Live Oak South                                              234323
-Logger Flat Group                                           232777
-Long Meadow Group                                           232822
-Mountain Home Guard Station Cabin                           234225
-Oak Flat Lookout                                            234601
-Paradise Cove                                               232792
-Pioneer Point                                               232793
-Poso Guard Station Cabin                                    234224
-Princess                                                    232782
-Quaking Aspen                                               232827
-Quaking Aspen Cabin                                         233933
-Redwood Meadow                                              232825
-Sandy Flat                                                  233182
-Stony Creek Sequoia                                         232785
-Ten Mile Campground                                         251363
-Thunderbird Group Campground                                121040
-Tillie Creek                                                232796
-Trapper Creek Campground                                    233195
-Upper Stony Creek Campground                                234672
-Wishon                                                      232807
-Wishon Cabin                                                234324
-White River                                                 232776
+Camp 9                                                      234011-
+Camp Four and Half Cabin                                    234457-
+Camp 3 (Camp Three Campground)                              232889-
+Cove Group                                                  232783-
+Coy Flat                                                    232893-
+Eshom Campground                                            233363-
+Fairview Campground                                         232890-
+Fir Group                                                   232784-
+French Gulch                                                232786-
+Frog Meadow Guard Station                                   234223-
+Goldledge Campground                                        232891-
+Grouse Valley                                               233325-
+Halfway Group Campground                                    120990-
+Headquarters                                                232819-
+Holey Meadow                                                232823-
+Hospital Flat                                               232816-
+Hume Lake                                                   232781-
+Hungry Gulch                                                232794-
+Limestone Campground                                        123440-
+Live Oak                                                    232790-
+Live Oak South                                              234323-
+Logger Flat Group                                           232777-
+Long Meadow Group                                           232822-
+Mountain Home Guard Station Cabin                           234225-
+Oak Flat Lookout                                            234601-
+Paradise Cove                                               232792-
+Pioneer Point                                               232793-
+Poso Guard Station Cabin                                    234224-
+Princess                                                    232782-
+Quaking Aspen                                               232827-
+Quaking Aspen Cabin                                         233933-
+Redwood Meadow                                              232825-
+Sandy Flat                                                  233182-
+Stony Creek Sequoia                                         232785-
+Ten Mile Campground                                         251363-
+Thunderbird Group Campground                                121040-
+Tillie Creek                                                232796-
+Trapper Creek Campground                                    233195-
+Upper Stony Creek Campground                                234672-
+Wishon                                                      232807-
+Wishon Cabin                                                234324-
+White River                                                 232776-
 232780 232809 234458 232795 256932 234011 234457 232889 232783 232893 233363 232890 232784 232786 234223 232891 233325 120990 232819 232823 232816 232781 232794 123440 232790 234323 232777 232822 234225 234601 232792 232793 234224 232782 232827 233933 232825 233182 232785 251363 121040 232796 233195 234672 232807 234324 232776
 
 ### SEQUOIA & KINGS CANYON NATIONAL PARK
-Buckeye Flat Campground                                     249982
-Canyon View Group Sites                                     234753
-Crystal Springs Campground Mid-Sized Group Sites            251008
-Dorst Creek Campground                                      232460
-Lodgepole Campground                                        232461
-Potwisha Campground                                         249979
-Sunset Campground                                           234752
-Sentinel Campground                                         253917
+Buckeye Flat Campground                                     249982-
+Canyon View Group Sites                                     234753-
+Crystal Springs Campground Mid-Sized Group Sites            251008-
+Dorst Creek Campground                                      232460-
+Lodgepole Campground                                        232461-
+Potwisha Campground                                         249979-
+Sunset Campground                                           234752-
+Sentinel Campground                                         253917-
 249982 234753 251008 232460 232461 249979 234752 253917
 
 ### DEATH VALLEY NATIONAL PARK
-Furnace Creek Campground                                    232496
+Furnace Creek Campground                                    232496-
 
 ### JOSHUA TREE NATIONAL PARK
-Black Rock Campground                                       232473
-Black Rock Equestrian Campground                            234723
-Cottonwood Campground                                       272299
-Cottonwood Group                                            232471
-Indian Cove Campground                                      232472
-Jumbo Rocks Campground                                      272300
-Sheep Pass Group                                            232470
+Black Rock Campground                                       232473-
+Black Rock Equestrian Campground                            234723-
+Cottonwood Campground                                       272299-
+Cottonwood Group                                            232471-
+Indian Cove Campground                                      232472-
+Jumbo Rocks Campground                                      272300-
+Sheep Pass Group                                            232470-
 232473 234723 272299 232471 232472 272300 232470
 
 ### LASSEN NATIONAL FOREST
-Almanor                                                     232246
-Christie Campground                                         232901
-Eagle Campground                                            232247
-Gurnsey Creek                                               232290
-Hat Creek                                                   232248
-McCarthy Point Lookout                                      234467
-Merrill Campground                                          232902
-West Eagle Campground                                       232916
+Almanor                                                     232246-
+Christie Campground                                         232901-
+Eagle Campground                                            232247-
+Gurnsey Creek                                               232290-
+Hat Creek                                                   232248-
+McCarthy Point Lookout                                      234467-
+Merrill Campground                                          232902-
+West Eagle Campground                                       232916-
 232246 232901 232247 232290 232248 234467 232902 232916
 
 #### POINT REYES NATIONAL SEASHORE
-Point Reyes National Seashore Campground                    233359
+Point Reyes National Seashore Campground                    233359-
 
 ### PINNACLES NATIONAL PARK
-Pinnacles Campground                                        234015
+Pinnacles Campground                                        234015-
