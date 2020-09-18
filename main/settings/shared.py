@@ -152,9 +152,9 @@ STATICFILES_DIRS = (
 # Whitenoise Configuration (for static files)
 WHITENOISE = config('WHITENOISE', cast=bool, default=True)
 if WHITENOISE:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'live-static', 'static-root')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 else:
-    STATIC_ROOT = ''
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Django Crispy Forms
