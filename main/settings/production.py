@@ -15,12 +15,12 @@ DJANGO_ALLOWED_HOSTS = ['*']
 
 # Use PostgreSQL
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': dj_database_url.config(),
     }
 
 # Workaround the PostgreSQL mandate for SSL
-options = DATABASES['default'].get('OPTIONS', ())
-options.pop('sslmode', None)
+# options = DATABASES['default'].get('OPTIONS', ())
+# options.pop('sslmode', None)
 
 # Whitenoise
 WHITENOISE = os.environ['WHITENOISE']
