@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include('apps.api.urls')),
+    path('api-gate/', views.api_gateway_view, name='api_gateway'),
     path('campgrounds/', include('apps.campgrounds.urls')),
     path('celery-progress/', include('celery_progress.urls')),
 ]

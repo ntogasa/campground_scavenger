@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="form-container">
+    <div class="row justify-content-center">
+        <div class="head solid col-12 col-sm-10 col-md-7">
+            <h1 class="text-center heading">API</h1>
+            <hr>
+            <p>
+                Other scrapers may benefit from access to a campground ID dataset.
+                Hence, Campground Checker offers an API with public read permissions.
+            </p>
+            <p>Each 'Campground' object in the database contains a campground name, campground ID number, and parent zone name.</p>
+            <br>
+            <p class="text-center"><a href="https://campground-checker.herokuapp.com/api/">ACCESS THE API</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
