@@ -9,7 +9,7 @@ django_heroku.settings(locals())
 
 # Heroku config variables
 SECRET_KEY = os.environ['SECRET_KEY']
-DEBUG = os.environ['DEBUG']
+DEBUG = os.environ['DEBUG'] == 'False'
 ALLOWED_HOSTS = ['*']
 DJANGO_ALLOWED_HOSTS = ['*']
 
@@ -23,7 +23,7 @@ DATABASES = {
 # options.pop('sslmode', None)
 
 # Whitenoise
-WHITENOISE = os.environ['WHITENOISE']
+WHITENOISE = os.environ['WHITENOISE'] == 'True'
 
 # Celery
 CELERY_BROKER_URL = 'amqp://localhost:5672'
@@ -34,5 +34,5 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'UTC'
 
 # CORS
-CORS_ORIGIN_ALLOW_ALL = os.environ.get('CORS_ORIGIN_ALLOW_ALL')
-CORS_ALLOW_CREDENTIALs = os.environ['CORS_ALLOW_CREDENTIALS']
+CORS_ORIGIN_ALLOW_ALL = os.environ['CORS_ORIGIN_ALLOW_ALL'] == 'True'
+CORS_ALLOW_CREDENTIALs = os.environ['CORS_ALLOW_CREDENTIALS'] == 'False'
