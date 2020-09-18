@@ -168,27 +168,30 @@ def master_scraping_routine(campgrounds, start_date, end_date, campsite_type=Non
     end_string = end_date.strftime('%a %b %d, %Y')
     results_list = []
     for camp_id in campgrounds:
-        campground_information = scrape_campground_availability(
-            camp_id, start_date, end_date, campsite_type
-        )
-        name_of_site = get_name_of_site(camp_id)
-        current, maximum = get_num_available_sites(
-            campground_information, start_date, end_date
-        )
-        if current:
-            # emoji = SUCCESS_EMOJI
-            success = True
-            availabilities = True
-        else:
-            # emoji = FAILURE_EMOJI
-            success = False
-            availabilities = False
-        availability = f"{name_of_site} {camp_id} : {current} site(s) available out of {maximum} site(s)"
-        rec_url = f"{BASE_URL}/camping/campgrounds/{camp_id}"
-        result = {
-            'success': success,
-            'availability': availability,
-            'url': rec_url,
-        }
-        results_list.append(result)
+        try:
+            campground_information = scrape_campground_availability(
+                camp_id, start_date, end_date, campsite_type
+            )
+            name_of_site = get_name_of_site(camp_id)
+            current, maximum = get_num_available_sites(
+                campground_information, start_date, end_date
+            )
+            if current:
+                # emoji = SUCCESS_EMOJI
+                success = True
+                availabilities = True
+            else:
+                # emoji = FAILURE_EMOJI
+                success = False
+                availabilities = False
+            availability = f"{name_of_site} {camp_id} : {current} site(s) available out of {maximum} site(s)"
+            rec_url = f"{BASE_URL}/camping/campgrounds/{camp_id}"
+            result = {
+                'success': success,
+                'availability': availability,
+                'url': rec_url,
+            }
+            results_list.append(result)
+        except KeyError:
+            pass
     return results_list, start_string, end_string
