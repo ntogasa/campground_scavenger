@@ -15,7 +15,7 @@ const App = new Vue({
     computed: {
         filteredCamps: function(){
             return this.campgrounds.filter((campground) => {
-                return campground.parent.includes(this.search);
+                return campground.parent.toLowerCase().includes(this.search.toLowerCase());
             });
         },
         filteredIDs: function(){
