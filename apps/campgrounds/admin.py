@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Campground, Log
+from .models import Campground
 
 
 # Register your models here.
@@ -8,11 +8,4 @@ class CampgroundAdmin(admin.ModelAdmin):
     ordering = ['parent', 'camp_id']
 
 
-# Register your models here.
-class LogAdmin(admin.ModelAdmin):
-    list_display = ['pk', 'date', 'start_id', 'end_id', 'count']
-    ordering = ['date',]
-
-
 admin.site.register(Campground, CampgroundAdmin)
-admin.site.register(Log, LogAdmin)
