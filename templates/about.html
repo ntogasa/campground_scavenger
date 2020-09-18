@@ -5,13 +5,19 @@
 {% block content %}
 <div class="form-container">
     <div class="row justify-content-center">
-        <div class="head solid col-12 col-sm-10 col-md-7 text-center">
+        <div class="head solid col-12 col-sm-10 col-md-7 px-5">
             <h1 class="text-center heading">What is this?</h1>
             <hr>
             <p>
-                Recreation.gov is the largest online portal to the thounsands of federally managed campgrounds
+                Put simply, Campground Scavenger makes finding and reserving campgrounds easier. How does it
+                do this? Well first, let's talk about the issue with recreation.gov.
+            </p>
+            <h3 class="heading text-center">What's the issue?</h3>
+            <p>
+                Recreation.gov is the online portal to all of the federally managed campgrounds
                 in the United States. Thousands of campgrounds in popular locations like Zion, Yellowstone, and
-                Yosemite can only be reserved through recreation.gov. <br>
+                Yosemite can only be reserved through recreation.gov.
+                <br><br>
                 Unfortunately, recreation.gov is grossly inefficient.
                 <br><br>
                 To find and reserve a campground, you would need to first visit a park/forest/zone's homepage, and
@@ -19,15 +25,17 @@
                 campsites for your dates.
                 <br><br>
                 This means that if you want to check if ANY campsites are available in Sequoia National Forest,
-                you would need to visit ~30 different webpages.
-                <br><br>
+                you could end up visiting ~30 different webpages.
+            </p>
+            <h3 class="heading text-center">So what can we do?</h3>
+            <p>
                 This inefficiency (which I believe is intentional design) is what Campground Scavenger is here to
                 resolve. Campground Scavenger allows you to mass check as many campgrounds as you wish with the single
                 click of a button, and tells you if there are any available campsites. It also provides links to each
                 campground checked, so you can quickly and easily make reservations.
                 <br>
             </p>
-            <h5 class="text-center">How to use</h5>
+            <h3 class="heading text-center">How to use</h3>
             <ol class="text-left">
                 <li>Go to <a href="{% url 'campgrounds' %}">Campgrounds</a> and search your desired parent zone (i.e. Kings Canyon National Park)</li>
                 <li>Copy the ID numbers, and go to the <a href="{% url 'availability' %}">Availability</a> page</li>
@@ -36,7 +44,7 @@
             </ol>
             <p>I hope this makes it easier for you to plan your next outdoor excursion. Enjoy!</p>
             <br>
-            <h5 class="text-center">API</h5>
+            <h4 class="heading text-center">API</h4>
             <p>You can visit the API to access our campground database. Each campground object in the database
             includes a name, ID number, and parent zone name.</p>
             <br>
