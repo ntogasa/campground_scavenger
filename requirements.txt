@@ -26,6 +26,7 @@ httpie==2.2.0
 idna==2.10
 kombu==4.6.11
 lxml==4.5.2
+pika==1.1.0
 psycopg2==2.8.5
 pycparser==2.20
 Pygments==2.7.0
