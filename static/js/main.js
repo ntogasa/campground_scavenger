@@ -21,5 +21,8 @@ const App = new Vue({
         filteredIDs: function(){
             return (this.filteredCamps.map(a => a.camp_id)).join(' ');
         },
+        string_length: function(){
+            return (this.search.length > 2);
+        }
     }
 })
