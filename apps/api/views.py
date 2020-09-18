@@ -1,6 +1,6 @@
 from rest_framework import viewsets, permissions
-from ..campgrounds.models import Campground, Log
-from .serializers import CampgroundSerializer, LogSerializer
+from ..campgrounds.models import Campground
+from .serializers import CampgroundSerializer
 
 
 class CampgroundViewSet(viewsets.ModelViewSet):
@@ -8,9 +8,3 @@ class CampgroundViewSet(viewsets.ModelViewSet):
     serializer_class = CampgroundSerializer
     lookup_field = 'camp_id'
 
-
-class LogViewSet(viewsets.ModelViewSet):
-    queryset = Log.objects.all()
-    serializer_class = LogSerializer
-    # Only authenticated users can access Log data through API
-    permission_classes = [permissions.IsAuthenticated]

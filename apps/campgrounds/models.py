@@ -9,13 +9,3 @@ class Campground(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Log(models.Model):
-    date = models.DateTimeField(auto_now=True)
-    count = models.IntegerField(null=True)
-    start_id = models.IntegerField(default=None)
-    end_id = models.IntegerField(default=None)
-
-    class Meta:
-        ordering = ['date']
