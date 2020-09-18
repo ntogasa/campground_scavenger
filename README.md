@@ -1,5 +1,5 @@
-# &#x26FA; Campground Checker
-Campsite Checker is a web application that scrapes campground
+# &#x26FA; Campground Scavenger
+Campsite Scavenger is a web application that scrapes campground
 availabilities from recreation.gov, and also saves campground ID 
 numbers.
 
@@ -9,7 +9,7 @@ CHECK IT OUT LIVE [HERE](https://campground-scavenger.herokuapp.com)
 Reserving campgrounds on recreation.gov is not a very 
 efficient process, as checking campground availabilities
 requires visiting each campground's website individually. Campground
-Checker resolves this inefficiency via mas search capabilities. It
+Scavenger resolves this inefficiency via mas search capabilities. It
 also provides an API.
 
 #### Mass Search Campground Availability
@@ -18,7 +18,7 @@ many campgrounds at the click of a button.
 
 For instance, if you want to find an available campsite in
 Yosemite National Park, rather than visiting each individual campground's
-webpage you can use Campground Checker to search them all at once. 
+webpage you can use Campground Scavenger to search them all at once. 
 
 #### API - Access Campground IDs, Names, Parents
 Included is an API with public read access. Each campground
@@ -55,6 +55,9 @@ STEP 2 - copy, paste, and submit
 - [HTML5](https://www.w3schools.com/html/)
 - [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) (CSS Framework) with some custom CSS
 - [Whitenoise](http://whitenoise.evans.io/en/stable/) to handle static files
+- [Celery](https://docs.celeryproject.org/en/stable/) task queue
+- [RabbitMQ](https://rabbitmq.com) message broker
+- [Heroku](https://heroku.com) cloud hosting platform (PaaS)
 
 ## Contributing
 Pull requests are welcome. For major changes, please
@@ -62,6 +65,6 @@ open an issue first to discuss what you would like
 to change. 
 
 ## Acknowledgements
-The campsite availability checker in this app is an adaptation of the work of 
+The campsite availability scraper in this app is an adaptation of the code from 
 https://github.com/banool/recreation-gov-campsite-checker, which in turn is 
 an adaptation of https://github.com/bri-bri/yosemite-camping 's application. 
