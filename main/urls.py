@@ -26,4 +26,5 @@ urlpatterns = [
     path('api-gate/', views.api_gateway_view, name='api_gateway'),
     path('campgrounds/', include('apps.campgrounds.urls')),
     path('celery-progress/', include('celery_progress.urls')),
+    path('contact/', include('apps.contact.urls')),
 ]

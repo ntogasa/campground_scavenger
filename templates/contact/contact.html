@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'base/base.html' %}
+{% block title %}Contact me{% endblock title %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row contact-box d-flex justify-content-center">
+        <div class="solid col-12 col-sm-10 col-md-7 px-4 pt-4">
+            <h1 class="heading text-center">
+                Contact me
+            </h1>
+            <hr>
+        </div>
+        <div class=" solid col-12 col-sm-10 col-md-7 px-4">
+            <p>If you'd like to leave a comment, ask a question, contribute data, or notify me of any bugs, please
+            use the form below.
+        </div>
+        <div class=" solid col-12 col-sm-10 col-md-7 px-4 pb-4">
+        {% include 'contact/contact_form.html' %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+
+</html>

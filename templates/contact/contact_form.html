@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+
+    <form method='POST' id="contact-form">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-0">
+                {{ form.email|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-6 mb-0">
+                 {{ form.name|as_crispy_field }}
+            </div>
+        </div>
+        <div>
+            {{ form.subject|as_crispy_field }}
+            {{ form.message|as_crispy_field }}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</html>

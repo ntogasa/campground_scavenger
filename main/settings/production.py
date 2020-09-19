@@ -40,3 +40,11 @@ CORS_ALLOW_CREDENTIALs = os.environ['CORS_ALLOW_CREDENTIALS'] == 'False'
 
 CELERY_BROKER_URL = os.environ.get('CLOUDAMQP_URL')
 BROKER_POOl_LIMIT = 1
+
+# Email (Contact Form) - allow less secure apps
+# less secure app switch for gmail: myaccount.google.com/lesssecureapps
+EMAIL_HOST = os.environ['EMAIL_HOST']
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
+EMAIL_USE_TLS = os.environ['EMAIL_USE_TLS'] == 'True'
+EMAIL_PORT = os.environ['EMAIL_PORT']

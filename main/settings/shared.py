@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'apps.api',
     'apps.campgrounds',
     'apps.campsite_checker',
+    'apps.contact',
 
 ]
 
@@ -164,6 +165,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticatedOrReadOnly',),
 }
+
+# Email (Contact Form) - allow less secure apps
+# less secure app switch for gmail: myaccount.google.com/lesssecureapps
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
+EMAIL_PORT = config('EMAIL_PORT')
 
 # CORS
 CORS_ORIGIN_ALLOW_ALL = config('CORS_ORIGIN_ALLOW_ALL', cast=bool, default=True)
