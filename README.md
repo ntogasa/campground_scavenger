@@ -46,17 +46,19 @@ reservation dates, and hit submit!
 STEP 1 - Assemble your own list of campground IDs by combining results 
 from different zones
 
-STEP 2 - copy, paste, and submit
+STEP 2 - Copy, paste, and submit
 
 ## Built Using
 - [Django](https://www.djangoproject.com/) (open source Python web framework)
 - [Django REST Framework](https://www.django-rest-framework.org/) for the API
 - [Vue JS](https://www.vuejs.org/) for interactive campground ID list display
-- [HTML5](https://www.w3schools.com/html/)
+- [HTML5](https://www.w3schools.com/html/) templates!
 - [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) (CSS Framework) with some custom CSS
 - [Whitenoise](http://whitenoise.evans.io/en/stable/) to handle static files
-- [Celery](https://docs.celeryproject.org/en/stable/) task queue
+- [Celery](https://docs.celeryproject.org/en/stable/) task queue and asynchronous scraping
+- [Celery-Progress](https://github.com/czue/celery-progress) to track task progress
 - [RabbitMQ](https://rabbitmq.com) message broker
+- [PostgreSQL](https://postgresql.org) database
 - [Heroku](https://heroku.com) cloud hosting platform (PaaS)
 
 ## Contributing
