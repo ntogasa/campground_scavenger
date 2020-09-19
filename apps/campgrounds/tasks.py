@@ -29,7 +29,7 @@ def scraping_routine(self, start_id, end_id):
     DATA = []
     i = 1
     for camp_id in range(start_id, end_id):
-        data = scrape_camp_info(camp_id)
+        data = AsyncResult(scrape_camp_info.delay(camp_id))
         DATA.append(data)
         progress_recorder.set_progress(i, job_count, description=f"{i} out of {job_count} potential campground IDs checked")
         i += 1
@@ -37,7 +37,7 @@ def scraping_routine(self, start_id, end_id):
     return {"count":count, "data": DATA}
 
 
-
+@shared_task()
 def scrape_camp_info(camp_id):
     url = f"{BASE_URL}{CAMP_STRING}{camp_id}{END_STRING}"
     # Wait between 0 to 1 seconds
