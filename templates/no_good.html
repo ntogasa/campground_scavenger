@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'base/base.html' %}
+{% block title %}No good{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <div class="row justify-content-center">
+        <div class="head solid col-12 col-sm-10 col-md-7 p-4 text-center">
+            <h1 class="text-center heading">No Results Found</h1>
+            <hr>
+            <p>Hmm...it seems that no results were found for your search.</p>
+            <p>This happened because one of the campground IDs you entered does not exist,
+            or because we could not find it in the recreation.gov API.</p>
+            <p>Please modify your inputs and >try again./p>
+        </div>
+    </div>
+</div>
+{% endblock %}

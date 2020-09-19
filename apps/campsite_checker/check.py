@@ -192,6 +192,11 @@ def master_scraping_routine(campgrounds, start_date, end_date, campsite_type=Non
                 'url': rec_url,
             }
             results_list.append(result)
+        # If an error occurred when checking one of the input IDs...
         except KeyError:
             pass
+    # If no results were found...
+    if len(results_list)<1:
+        return False
+    # Return results to view
     return results_list, start_string, end_string
