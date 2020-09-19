@@ -24,7 +24,7 @@ def scraping_routine(self, start_id, end_id):
     progress_recorder = ProgressRecorder(self)
     # Prepare variables
     start_id = int(start_id)
-    end_id = int(end_id)
+    end_id = int(end_id) + 1
     job_count = end_id - start_id
     DATA = []
     i = 1
