@@ -18,7 +18,7 @@ from django.urls import path, re_path, include
 from . import views
 
 urlpatterns = [
-    path('', include('apps.campsite_checker.urls')),
+    path('', include('apps.scavenger.urls')),
     path('about/', views.about_view, name='about'),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),

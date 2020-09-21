@@ -18,7 +18,7 @@ def campground_checker_view(request):
                                                                      'end_date': end_string,
                                                                      'results': results})
             except:
-                return render(request, 'no_good.html')
+                return render(request, 'no_results_found.html')
         else:
             return 'No success'
     # If GET or other type of request, load empty form

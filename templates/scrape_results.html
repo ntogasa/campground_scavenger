@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% extends 'base/base.html' %}
 {% load static %}
-{% block title %}{% endblock %}
+{% block title %}Scraping Results{% endblock %}
 
 {% block content %}
 <div class="container-fluid">
@@ -15,6 +15,7 @@
             <div class="progress-wrapper">
                 <div id="progress-bar" role='progress-bar' class="progress-bar">&nbsp;</div>
                 <div id="progress-text"></div>
+                <div id="celery-result"></div>
             </div>
         </div>
     </div>

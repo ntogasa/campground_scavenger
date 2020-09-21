@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('campsite_checker', '0002_auto_20200913_2205'),
+        ('scavenger', '0002_auto_20200913_2205'),
     ]
 
     operations = [

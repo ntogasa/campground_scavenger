@@ -2,6 +2,8 @@
 {% extends 'base/base.html' %}
 {% load static %}
 
+{% block title %}About{% endblock %}
+
 {% block content %}
 <div class="form-container">
     <div class="row justify-content-center">
@@ -27,7 +29,7 @@
                 if ANY campgrounds in a park are available? There are ~30 different campgrounds in Sequoia National
                 Forest, so to check them all would mean you have to visit ~30 different webpages.
             </p>
-            <h3 class="heading text-center">Campground Scavenger can Mass Check</h3>
+            <h3 class="heading text-center">Mass Checking</h3>
             <p class="text-center">
                 Campground Scavenger allows you to mass check as many campgrounds as you wish with the single
                 click of a button. It also provides links to each
@@ -48,7 +50,7 @@
             <p class="text-center">You can visit the API to access our campground database. Each campground object in the database
             includes a name, ID number, and parent zone name.</p>
             <br>
-            < class="text-center"p>If you have any questions, comments, or would like to contribute data, please
+            <p class="text-center">If you have any questions, comments, or would like to contribute data, please
                 <a href="{% url 'contact' %}">contact me!</a></p>
         </div>
     </div>

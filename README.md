@@ -3,7 +3,7 @@ Campsite Scavenger is a web application that scrapes campground
 availabilities from recreation.gov, and also saves campground ID 
 numbers.
 
-CHECK IT OUT LIVE [HERE](https://campground-scavenger.herokuapp.com) 	
+**CHECK IT OUT LIVE [HERE](https://campground-scavenger.herokuapp.com)** 	
 
 ## Purposes/Functions
 Reserving campgrounds on recreation.gov is not a very 
@@ -29,9 +29,9 @@ Example campground object:
 
 #### Campground ID Scraper
 Authenticated users can scrape the recreation.gov API to discover and save
-campground ID numbers, names, and parent zone names. These objects are then
-displayed via a Vue JS app, which the public can use to mass search 
-availability.
+campground ID numbers, names, and parent zone names. These objects can then 
+be filtered through and selected by users for input into the availability
+checker. 
 
 ## Usage
 ##### Suggested flow:

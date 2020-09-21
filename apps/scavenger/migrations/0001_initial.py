@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('camp_id', models.CharField(max_length=6)),
                 ('name', models.CharField(max_length=100)),
-                ('zone', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='campsite_checker.Zone')),
+                ('zone', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='scavenger.Zone')),
             ],
         ),
     ]

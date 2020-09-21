@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     # Self-created apps
     'apps.api',
     'apps.campgrounds',
-    'apps.campsite_checker',
+    'apps.scavenger',
     'apps.contact',
 
 ]
