@@ -22,6 +22,8 @@ END_STRING = "_asset"
 def scraping_routine(self, start_id, end_id):
     # Instantiate progress recorder to show users
     progress_recorder = ProgressRecorder(self)
+    # Check what is already saved in database
+    status_quo = Campground.objects.values_list('camp_id', flat=True)
     # Prepare variables
     start_id = int(start_id)
     end_id = int(end_id) + 1
@@ -29,7 +31,7 @@ def scraping_routine(self, start_id, end_id):
     DATA = []
     i = 1
     for camp_id in range(start_id, end_id):
-        data = AsyncResult(scrape_camp_info.delay(camp_id))
+        data = scrape_camp_info(camp_id, status_quo)
         DATA.append(data)
         progress_recorder.set_progress(i, job_count, description=f"{i} out of {job_count} potential campground IDs checked")
         i += 1
@@ -37,41 +39,45 @@ def scraping_routine(self, start_id, end_id):
     return {"count":count, "data": DATA}
 
 
-@shared_task()
-def scrape_camp_info(camp_id):
+def scrape_camp_info(camp_id, status_quo):
     url = f"{BASE_URL}{CAMP_STRING}{camp_id}{END_STRING}"
     # Wait between 0 to 1 seconds
     sleep(random())
     # Scraping routine
-    try:
-        resp = requests.get(url=url,
-                            headers={"User-Agent": UserAgent().random},)
-        response = resp.json()
-        name = response['results'][0]['name']
-        parent_name = response['results'][0]['parent_name']
-        data = {
-            "camp_id": str(camp_id),
-            "name": name,
-            "parent": parent_name
-        }
-        save_function(camp_id, data)
-    except:
-        return False
+    # try:
+    resp = requests.get(url=url,
+                        headers={"User-Agent": UserAgent().random},)
+    response = resp.json()
+    name = response['results'][0]['name']
+    parent_name = response['results'][0]['parent_name']
+    data = {
+        "camp_id": str(camp_id),
+        "name": name,
+        "parent": parent_name
+    }
+    store_data(camp_id, data, status_quo)
+    # except:
+    #     return False
     return data
 
 
-def save_function(camp_id, data):
-    # If campground already exists in database, update
-    if Campground.objects.filter(camp_id=str(camp_id)).exists():
-        # Save to campground model
-        campground = Campground.objects.filter(camp_id=str(camp_id))
-        campground.camp_id = data['camp_id']
-        campground.name = data['name']
-        campground.parent = data['parent']
+def store_data(camp_id, data, status_quo):
+    if camp_id in status_quo:
+        update(camp_id, data)
     # If campground does not exist yet, save new object
     else:
-        campground = Campground(camp_id=data['camp_id'],
-                                name=data['name'],
-                                parent=data['parent'])
-        campground.save()
-    return data
+        save(data)
+
+
+def update(camp_id, data):
+    campground = Campground.objects.filter(camp_id=str(camp_id))
+    campground.camp_id = data['camp_id']
+    campground.name = data['name']
+    campground.parent = data['parent']
+
+
+def save(data):
+    campground = Campground(camp_id=data['camp_id'],
+                            name=data['name'],
+                            parent=data['parent'])
+    campground.save()
