@@ -10,7 +10,7 @@
 {% block content %}
     <div class="form-container">
         <div class="row justify-content-center">
-            <div class="head col-12 col-sm-9 col-md-5 solid text-center px-4">
+            <div class="head col-12 col-sm-9 col-md-7 solid text-center px-4">
                 <h1 class="heading">Let's get scraping</h1>
                 <hr>
                 <p>
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-12 col-sm-9 col-md-5 solid px-4">
+            <div class="col-12 col-sm-9 col-md-7 solid px-4">
                 <form class = "availability-form" action="" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-12 col-sm-9 col-md-5 pb-4 solid px-4">
+            <div class="col-12 col-sm-9 col-md-7 pb-4 solid px-4">
                 <br>
                 <small>Campground IDs are six digit numbers. You can find them by going to a campground's
                 webpage on recreation.gov and looking in the URL.

@@ -6,5 +6,5 @@ from . import views
 
 urlpatterns = [
     path('campgrounds/', views.list_view, name='campgrounds'),
-    path('find_camp_ids/', views.scrape_view, name='scrape_ids')
+    path('find_camp_ids/', views.scrape_view, name='scrape_ids'),
 ]

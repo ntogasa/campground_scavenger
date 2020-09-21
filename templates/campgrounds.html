@@ -8,8 +8,8 @@
         <!--Link to Campground ID scraper-->
     {% if user.is_authenticated %}
     <div class="row justify-content-center">
-        <div class="col-12 col-sm-10 col-md-7 text-center solid pt-5">
-            <a href="{% url 'scrape_ids' %}">Scrape campground ID numbers</a>
+        <div class="col-12 col-sm-10 col-md-7 text-center solid pt-5 pb-2 px-4">
+            <a class="btn btn-success" role="button" href="{% url 'scrape_ids' %}">SCRAPE CAMPGROUND ID NUMBERS</a>
         </div>
     </div>
     {% endif %}
@@ -17,6 +17,7 @@
     <!--Heading-->
     <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-7 text-center solid px-4 pt-4">
+            <hr>
             <h1 class="heading">Campground Database</h1>
             <hr>
             <p> Here you can access our campground ID database. </p>
