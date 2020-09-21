@@ -69,4 +69,6 @@ to change.
 ## Acknowledgements
 The campsite availability scraper in this app is an adaptation of the code from 
 https://github.com/banool/recreation-gov-campsite-checker, which in turn is 
-an adaptation of https://github.com/bri-bri/yosemite-camping 's application. 
+an adaptation of https://github.com/bri-bri/yosemite-camping 's application. Much
+thanks to both of them for providing the foundation and inspiration for this
+project!
