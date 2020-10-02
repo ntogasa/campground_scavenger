@@ -6,11 +6,13 @@ from . import tasks
 
 # Create your views here.
 def list_view(request):
+    """Returns the campground list page"""
     campgrounds = Campground.objects.all()
     return render(request, 'campgrounds.html')
 
 
 def scrape_view(request):
+    """Returns the campground ID scraping page and handles submitted scraping requests"""
     if request.method == 'POST':
         form = forms.IDSearchForm(request.POST)
         if form.is_valid():

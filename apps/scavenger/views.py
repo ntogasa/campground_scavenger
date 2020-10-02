@@ -4,6 +4,7 @@ from . import models, forms, check
 
 # Create your views here.
 def campground_checker_view(request):
+    """Handles availability requests and loads the form for users to submit requests."""
     # If POST request, retrieve data from API
     if request.method == 'POST':
         form = forms.CampgroundForm(request.POST)

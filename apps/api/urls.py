@@ -6,4 +6,5 @@ from . import views
 router = DefaultRouter()
 router.register(r'campgrounds', views.CampgroundViewSet, basename='campgrounds_api')
 
+# Set up the URL patterns
 urlpatterns = router.urls

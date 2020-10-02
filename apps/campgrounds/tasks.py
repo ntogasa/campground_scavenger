@@ -1,14 +1,9 @@
 import requests
-import os
-import json
-from lxml.html import fromstring
 from fake_useragent import UserAgent
-from itertools import cycle
 from time import sleep
 from random import random
 from .models import Campground
 from celery import shared_task
-from celery.result import AsyncResult
 from celery_progress.backend import ProgressRecorder
 
 
@@ -20,6 +15,14 @@ END_STRING = "_asset"
 
 @shared_task(bind=True)
 def scraping_routine(self, start_id, end_id):
+    """Iterates through a given range of numbers and checks the recreation.gov API to see if there
+    are any matching campground ID numbers. If a campground ID has already been saved, then it is
+    updated. If not then a new campground object is created.
+    :param start_id:    lower bound of the search range
+    :type start_id:     str
+    :param end_id:      high bound of the search range
+    :type end_id:       str
+    """
     # Instantiate progress recorder to show users
     progress_recorder = ProgressRecorder(self)
     # Check what is already saved in database
@@ -40,6 +43,13 @@ def scraping_routine(self, start_id, end_id):
 
 
 def scrape_camp_info(camp_id, status_quo):
+    """Checks recreation.gov to see if a campground ID number has any associated data, and either
+    updates an existing campground in the database or creates a new campground object.
+    :param camp_id:     the target number to check/scrape
+    :type camp_id:      int
+    :param status_quo:  the currently 'known' campground IDs
+    :type status_quo:   list
+    """
     url = f"{BASE_URL}{CAMP_STRING}{camp_id}{END_STRING}"
     # Wait between 0 to 1 seconds
     sleep(random())
@@ -62,6 +72,7 @@ def scrape_camp_info(camp_id, status_quo):
 
 
 def store_data(camp_id, data, status_quo):
+    """Checks if a campground object already exists or not"""
     if camp_id in status_quo:
         update(camp_id, data)
     # If campground does not exist yet, save new object
@@ -70,6 +81,7 @@ def store_data(camp_id, data, status_quo):
 
 
 def update(camp_id, data):
+    """Updates the attributes of an existing campground object"""
     campground = Campground.objects.filter(camp_id=str(camp_id))
     campground.camp_id = data['camp_id']
     campground.name = data['name']
@@ -77,6 +89,7 @@ def update(camp_id, data):
 
 
 def save(data):
+    """Creates and saves a new campground object"""
     campground = Campground(camp_id=data['camp_id'],
                             name=data['name'],
                             parent=data['parent'])

@@ -4,6 +4,7 @@ from dateutil.relativedelta import relativedelta
 
 
 class CampgroundForm(forms.Form):
+    """Allows users to search for campground availability"""
     day1 = (dt.now() + relativedelta(days=14)).strftime('%Y-%m-%d')
     day2 = (dt.now() + relativedelta(days=16)).strftime('%Y-%m-%d')
     start_date = forms.CharField(label="Start date (yyyy-mm-dd)",
